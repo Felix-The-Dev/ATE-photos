@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(193, 247, 179);
+    color: darkgreen;
+    text-align: center;
+}
+
+header{
+    font-size: 1.5em;
+}
+
+nav button, nav select{
+    font-size: 2.5em;
+}
+
+section#description{
+    font-size: 2em;
+    height: 75%;
+    background-color: rgb(139, 224, 156);
+}
+
+footer{
+    font-size: 1.5em;
+    position:absolute;
+    bottom: 10px;
+}
