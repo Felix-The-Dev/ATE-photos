@@ -2,7 +2,6 @@
 
 function changePage(page = "next"){
     let Decription_field = document.getElementById("description")
-    let Select = document.getElementById("select")
     let actual_page_num = parseInt(document.getElementById("page_num").innerText)
     let new_page_num = null
 
@@ -11,7 +10,7 @@ function changePage(page = "next"){
     let Description_content = null
 
     if (page == "next"){
-        if (actual_page_num<10){
+        if (actual_page_num<7){
             new_page_num = actual_page_num+1
         }
         else{
@@ -53,9 +52,14 @@ changePage(1)
 
 let PreviousButton = document.getElementById("previous_button");
 let NextButton = document.getElementById("next_button");
+let Select = document.getElementById("select")
 
 PreviousButton.addEventListener("click", ()=>{
     changePage("previous")
+});
+
+Select.addEventListener("click", ()=>{
+    changePage(1)
 });
 
 NextButton.addEventListener("click", ()=>{
