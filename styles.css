@@ -14,12 +14,23 @@ nav button, nav select{
 
 section#description{
     font-size: 2em;
+    text-align: left;
+    margin-inline: 50px;
+    margin-block: 30px;
+    padding: 50px;
     height: 75%;
     background-color: rgb(139, 224, 156);
 }
 
 footer{
     font-size: 1.5em;
+    text-align: left;
+    display: flex;
     position:absolute;
     bottom: 10px;
+}
+footer img{
+    width: 150px;
+    border: 10px black double;
+    margin-inline: 20px
 }

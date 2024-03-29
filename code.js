@@ -1,3 +1,13 @@
+let PreviousButton = document.getElementById("previous_button");
+let NextButton = document.getElementById("next_button");
+let Select = document.getElementById("select");
+
+/*On sélectionne le bon titre*/
+num_of_options=0;
+[...document.getElementsByTagName("option")].forEach(option => {
+    num_of_options++;
+})
+
 
 
 function changePage(page = "next"){
@@ -10,7 +20,7 @@ function changePage(page = "next"){
     let Description_content = null
 
     if (page == "next"){
-        if (actual_page_num<7){
+        if (actual_page_num<num_of_options){
             new_page_num = actual_page_num+1
         }
         else{
@@ -49,10 +59,6 @@ function changePage(page = "next"){
 }
 
 changePage(1)
-
-let PreviousButton = document.getElementById("previous_button");
-let NextButton = document.getElementById("next_button");
-let Select = document.getElementById("select")
 
 PreviousButton.addEventListener("click", ()=>{
     changePage("previous")
