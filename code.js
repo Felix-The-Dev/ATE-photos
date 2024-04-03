@@ -11,10 +11,8 @@ num_of_options=0;
 /*On met en rouge les descriptions qui n'ont pas encore été ajoutées*/
 i=0;
 [...document.getElementsByTagName("option")].forEach(option => {
-    console.log('descrp = "'+[...document.getElementsByClassName("description")][i].innerText+'"')
-    if ([...document.getElementsByClassName("description")][i].innerText=="[work in progress]"){
-        option.classList.append("not-finished")
-        console.log('apened')
+    if ([...document.getElementsByClassName("description")][i].innerText== document.getElementById("not-completed-description").innerText){
+        option.classList.add("not-finished")
     }
     i++;  
 })
@@ -66,6 +64,14 @@ function changePage(page = "next"){
     /*On affiche le texte de description*/
     Description_content = document.getElementById("description"+new_page_num).innerHTML
     Decription_field.innerHTML = Description_content
+    
+    /*On met le texte en rouge si la description n'est poas encore mise*/
+    if (document.getElementById("photo"+new_page_num).classList.contains("not-finished")){
+        Decription_field.classList.add("not-finished")
+    }
+    else{
+        Decription_field.classList.remove("not-finished")
+    }
 }
 
 changePage(1)

@@ -14,28 +14,28 @@ nav button, nav select{
 
 section#description{
     font-size: 2em;
+    line-height: 1.25;
     text-align: left;
     margin-inline: 50px;
     margin-block: 30px;
     padding: 50px;
-    height: 75%;
+    min-height: 325px;
     background-color: rgb(139, 224, 156);
+}
+
+.not-finished{
+    background-color:lightcoral;
+    color:darkred
 }
 
 footer{
     font-size: 1.5em;
     text-align: left;
     display: flex;
-    position:absolute;
-    bottom: 10px;
 }
 footer img{
-    width: 150px;
+    max-width: 150px;
+    max-height: 300px;
     border: 10px black double;
     margin-inline: 20px
-}
-
-.not-finished{
-    background-color:lightcoral;
-    color:darkred
 }
