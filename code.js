@@ -8,6 +8,16 @@ num_of_options=0;
     num_of_options++;
 })
 
+/*On met en rouge les descriptions qui n'ont pas encore été ajoutées*/
+i=0;
+[...document.getElementsByTagName("option")].forEach(option => {
+    console.log('descrp = "'+[...document.getElementsByClassName("description")][i].innerText+'"')
+    if ([...document.getElementsByClassName("description")][i].innerText=="[work in progress]"){
+        option.classList.append("not-finished")
+        console.log('apened')
+    }
+    i++;  
+})
 
 
 function changePage(page = "next"){
@@ -64,8 +74,18 @@ PreviousButton.addEventListener("click", ()=>{
     changePage("previous")
 });
 
-Select.addEventListener("click", ()=>{
-    changePage(1)
+Select.addEventListener("change", ()=>{
+    /*On récupère le titrte sélectionné*/
+    new_page=0;
+    i=0;
+    [...document.getElementsByTagName("option")].forEach(option => {
+        i++;
+        if (option.selected){
+            new_page=i;
+        }
+    })
+    console.log("changed ! to new_page : "+new_page);
+    changePage(new_page)
 });
 
 NextButton.addEventListener("click", ()=>{

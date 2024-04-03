@@ -34,3 +34,8 @@ footer img{
     border: 10px black double;
     margin-inline: 20px
 }
+
+.not-finished{
+    background-color:lightcoral;
+    color:darkred
+}
