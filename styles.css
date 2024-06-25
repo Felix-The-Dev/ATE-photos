@@ -15,13 +15,19 @@ nav button, nav select{
 section#description{
     font-size: 2em;
     line-height: 1.25;
-    text-align: left;
+    text-align: center;
     margin-inline: 50px;
     margin-block: 30px;
     padding: 50px;
     min-height: 325px;
     background-color: rgb(139, 224, 156);
 }
+
+section#description img{
+    height: 500px
+}
+
+
 
 .not-finished{
     background-color:lightcoral;
